@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: #4fc3f7;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background-image: url('images/banner.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 3em; /* Main title size */
+}
+
+.banner-content p {
+    font-size: 1.5em; /* Subheading size */
+}
+
+/* Button Styles */
+.btn-primary {
+    background: #0288d1;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background: #4fc3f7; /* Lighten on hover */
+}
+
+/* Doctor Information Section */
+.doctor-info {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #e3f2fd; /* Light blue background */
+}
+
+.doctor-info h2 {
+    font-size: 2.5em;
+}
+
+.doctor-info .doctor-details {
+    font-size: 1.2em;
+}
+
+.doctor-image {
+    width: 150px; /* Set the width of the doctor's image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make image circular */
+    margin-bottom: 20px; /* Spacing below the image */
+}
+
+/* Highlight Section */
+.highlight {
+    background-color: #ffeb3b; /* Bright yellow for attraction */
+    color: #333;
+    padding: 30px;
+    text-align: center;
+}
+
+.highlight h2 {
+    font-size: 2.5em;
+}
+
+.highlight h3 {
+    font-size: 1.8em;
+}
+
+/* Appointment Section */
+.appointment {
+    background-color: #f1f8e9; /* Light green for calmness */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.appointment h2 {
+    font-size: 2.5em;
+    color: #4caf50; /* Dark green for headings */
+}
+
+.appointment p {
+    font-size: 1.1em;
+}
+
+.appointment form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appointment input,
+.appointment textarea {
+    width: 80%; /* Responsive width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment button {
+    width: 50%;
+    padding: 15px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #c8e6c9;
+    color: #333;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 70vh; /* Slightly reduce height for smaller screens */
+    }
+    
+    .hero-banner h1 {
+        font-size: 2.5em; /* Adjust font size for mobile */
+    }
+
+    .hero-banner p {
+        font-size: 1.2em; /* Adjust paragraph font size for mobile */
+    }
+
+    .btn-primary {
+        padding: 10px 15px; /* Adjust button padding for mobile */
+        font-size: 0.9em; /* Adjust button font size */
+    }
+
+    .doctor-image {
+        width: 120px; /* Smaller image size on mobile */
+    }
+}

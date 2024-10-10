@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agarwal Children's Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#appointment">Book Appointment</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header class="hero-banner" id="home">
+        <div class="banner-content">
+            <h1>Welcome to Agarwal Children’s Hospital</h1>
+            <p>Excellence in Pediatric Care with a Heart</p>
+            <a href="#appointment" class="btn-primary">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Doctor Information Section -->
+    <section class="doctor-info" id="about">
+        <h2>Meet Our Specialist</h2>
+        <div class="doctor-details">
+            <img src="images/doctor.jpg" alt="Dr. Praduman Agarwal" class="doctor-image"> <!-- Doctor's Image -->
+            <h3>Dr. Praduman Agarwal</h3>
+            <p>Specialist in Pediatric Care</p>
+            <p>Email: <a href="mailto:pradhumanagarwal99@gmail.com">pradhumanagarwal99@gmail.com</a></p>
+            <p>Phone: <a href="tel:9904083371">9904083371</a></p>
+            <p>Location: Deesa, Gujarat</p>
+        </div>
+    </section>
+
+    <!-- Highlight Section -->
+    <section class="highlight">
+        <h2>Deesa's Biggest Child Hospital</h2>
+        <h3>The Best Hospital for Children's Care</h3>
+    </section>
+
+    <!-- Appointment Section -->
+    <section class="appointment" id="appointment">
+        <h2>Book an Appointment</h2>
+        <p>Fill out the form below to schedule an appointment with Dr. Praduman Agarwal.</p>
+        <form action="#" method="POST">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone Number" required>
+            <input type="date" placeholder="Select Date" required>
+            <textarea placeholder="Additional Notes (optional)"></textarea>
+            <button type="submit" class="btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Agarwal Children's Hospital. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript Code for Smooth Scrolling and Form Validation -->
+    <script>
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default anchor click behavior
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth' // Smooth scroll effect
+                });
+            });
+        });
+
+        // Form Validation for Appointment Booking
+        document.querySelector('.appointment form').addEventListener('submit', function (e) {
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const date = this.querySelector('input[type="date"]').value;
+
+            // Check for empty fields
+            if (!name || !email || !phone || !date) {
+                alert('Please fill in all required fields.'); // Alert user
+                e.preventDefault(); // Prevent form submission
+            } else {
+                alert('Appointment booked successfully!'); // Success message
+            }
+        });
+    </script>
+</body>
+</html>
